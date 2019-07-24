@@ -1,6 +1,6 @@
 * [Home](/)
 * [Step 1: Setup AWS account](setup-aws.md "creating an AWS account")
-* [Step 2: Setup AWS SES](setup-ses.md "Setup AWS SES with custom domain to receive emails")
+* [Step 2: Setup AWS SES](setup-ses.md "Setup AWS SES receving email with custom domain")
 - [Step 3: Setup AWS S3](setup-ss3.md "configure SES to store incoming email to S3 bucket")
 * [Step 4: Setup AWS IAM](setup-iam.md "assgining right S3 bucket access permission to allow your users accessing it")
 * [Step 5: Setup AWS Cognito](setup-cognito.md "creating cognito to manage yur users")
