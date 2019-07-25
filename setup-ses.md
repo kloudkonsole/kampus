@@ -67,3 +67,5 @@ Review your new rule settings, click `Create Rule` when you done so
 ![setup-ses-step16](img/setup-ses-step16.png)
 
 Congratulations! after SES finish verifying your domain name, you can start sending mail to the email address
+
+for more details setup process and explanation please check the [official docs](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email.html)
