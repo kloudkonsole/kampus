@@ -1,5 +1,5 @@
 # Kloud Konsole
-The objective of this documentation is to give you a step by step guide to setup AWS services to work with KloudKonsole webmail client.
+The objective of this documentation is to give you a step by step guide to setup kloud konsole to use AWS services
 
 ## Summary
 - **Step 1**, creating an AWS account
