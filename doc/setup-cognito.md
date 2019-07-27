@@ -2,6 +2,7 @@
 You will need cognito to manage your user identity and access to your mailbox
 
 ### prerequisite:
+- an email address setup in SES with sending capability
 - about 30 mins time
 
 ## Create User Pool
@@ -50,4 +51,32 @@ then clikc `Next Step` to proceed
 ![setup-cognito-step13](../img/cognito/13.png)
 
 * In `Review` page, after reviewing the settings click on `Create pool` button to create your user pool
-![setup-cognito-step13](../img/cognito/13.png)
+![setup-cognito-step14](../img/cognito/14.png)
+
+### Take Away
+Please take note of these two ID, they are useful in following steps
+- User Pool Id: `ap-southeast-1_XXXXXXXX`
+![setup-cognito-step15](../img/cognito/15.png)
+- App Client Id: `xxxxxxxxxxxxxxxxxxxxxxxxxx`
+![setup-cognito-step16](../img/cognito/16.png)
+
+## Create Identity Pool
+While user pool help you manage your users, identity pool manage their permission. this section discuss how to allow your regisered users to access your S3
+bucket
+
+* From User Pool page click `Federated Identities` link
+![setup-cognito-step17](../img/cognito/17.png)
+
+* Click `Create a New Identity Pool` button
+![setup-cognito-step18](../img/cognito/18.png)
+
+* give your identity pool a name, expand `Authentication providers` and key in the user pool id and app client id you noted in last section
+![setup-cognito-step19](../img/cognito/19.png)
+
+* finally click `Allow` to create two roles in IAM for your registered users. one for autenticated users and another one for unautneticated users.
+![setup-cognito-step20](../img/cognito/20.png)
+
+### Take Away
+Please take note of the identity pool
+![setup-cognito-step21](../img/cognito/21.png)
+
