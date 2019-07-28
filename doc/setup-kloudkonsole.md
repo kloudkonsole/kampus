@@ -1,7 +1,7 @@
 # Setup Kloud Konsole
 
 ### Prerequisite
-- cognito region id
+- S3 region name
 - S3 bucket name
 - Cognito user pool id
 - Cognito app client id

@@ -99,8 +99,3 @@ https://email-verification.us-east-1.amazonaws.com/?Context=111111111111&X-Amz-D
 
 * go back to your SES page, you should seen the status newly added email address change to `Verified`
 ![setup-ses-step23](../img/ses/23.png)
-
-
-
-
-
