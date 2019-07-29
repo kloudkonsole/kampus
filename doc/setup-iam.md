@@ -27,6 +27,7 @@ From cognito setup there are two IAM roles created for you, in this section we w
 
 This policy is to allow regsitered users to list and read the content in the specified S3 bucket (`mail-kloudkonsole-test`)
 
+**remember to replace `mail-kloudkonsole-test` by your s3 bucket name**
 ```json
 {
 	"Version": "2012-10-17",
@@ -35,12 +36,9 @@ This policy is to allow regsitered users to list and read the content in the spe
 			"Sid": "ListYourObjects",
 			"Effect": "Allow",
 			"Action": "s3:ListBucket",
-			"Resource": ["arn:aws:s3:::mail-kloudkonsole-test"],
-			"Condition": {
-				"StringLike": {
-					"s3:prefix": ["cognito/kloudkonsole/${cognito-identity.amazonaws.com:sub}"]
-				}
-			}
+			"Resource": [
+				"arn:aws:s3:::mail-kloudkonsole-test"
+			]
 		},
 		{
 			"Sid": "ReadWriteDeleteYourObjects",
@@ -49,8 +47,7 @@ This policy is to allow regsitered users to list and read the content in the spe
 				"s3:GetObject"
 			],
 			"Resource": [
-				"arn:aws:s3:::mail-kloudkonsole-test/cognito/kloudkonsole/${cognito-identity.amazonaws.com:sub}",
-				"arn:aws:s3:::mail-kloudkonsole-test/cognito/kloudkonsole/${cognito-identity.amazonaws.com:sub}/*"
+				"arn:aws:s3:::mail-kloudkonsole-test/*"
 			]
 		}
 	]
