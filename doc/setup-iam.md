@@ -1,29 +1,20 @@
 # Setup IAM
 From cognito setup there are two IAM roles created for you, in this section we will setup the two IAM roles
 
-### prerequisite:
+### prerequisite
+- IAM role that used by cognito service, see [setup-cognito](doc/setup-cognito.md)
 - a S3 bucket name, `mail-kloudkonsole-test` for this example
-- a cognito application name, `kloudkonsole` for this exmaple
 - about 30 mins time
 
-## Create Policy
+## Attach a IAM Policy to your Cognito Role
 * go to IAM page
 ![setup-iam-00](../img/iam/00.png)
 
-* click on `Roles` in side menu and your role in the list, for this example it is called `Cognito_kloudkonsole_testerAuth_Role`
+* select `Policies` at the sidebar and click on `Create Policy` button
 ![setup-iam-01](../img/iam/01.png)
 
-* click on `Attach Policy` button
+* When the create policy dialogbox open, click on `JSON` tab and then copy the following policy to the textarea
 ![setup-iam-02](../img/iam/02.png)
-
-* click on `Create Policy` button
-![setup-iam-03](../img/iam/03.png)
-
-* click on `Create Policy` button
-![setup-iam-03](../img/iam/03.png)
-
-* Open the `json` tab and paste the following json to the text area
-![setup-iam-04](../img/iam/04.png)
 
 This policy is to allow regsitered users to list and read the content in the specified S3 bucket (`mail-kloudkonsole-test`)
 
@@ -54,5 +45,13 @@ This policy is to allow regsitered users to list and read the content in the spe
 }
 ```
 
-* finally give your new policy a name and click on `Create policy` button
+* give your new policy a name and click on `Create policy` button to create your policy
+![setup-iam-03](../img/iam/03.png)
+
+* go back to policies list and select new policy and then choose `Attach` as policy actions
+![setup-iam-04](../img/iam/04.png)
+
+* In `Attach Policy` list, select the role created by cognito, e,g, `Cognito_kloudkonsole_testerAuth_Role` then click `Create Policy`
 ![setup-iam-05](../img/iam/05.png)
+
+by doing this you allow loginned users about to do readonly actions on your S3 bucket.

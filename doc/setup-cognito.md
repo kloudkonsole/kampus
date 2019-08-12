@@ -20,10 +20,10 @@ You will need cognito to manage your user identity and access to your mailbox
 * Give a name to user pool, choose `Step throug settings`
 ![setup-cognito-step03](../img/cognito/03.png)
 
-* Setup the attributes you going to collect from your users. for this example we only asked for `email`
+* Setup the attributes you going to collect from your users. unchecked `email`, we don't collect anything from our user
 ![setup-cognito-step04](../img/cognito/04.png)
 
-* This page ask for the security settings of the password, for this example we uncheck `Required special characters` to keep the signup process simple
+* This page ask for the security settings of the password, use the default settings
 ![setup-cognito-step05](../img/cognito/05.png)
 
 * In MFA nd verification page, feel free to add multi-factor authetication (MFA) to increase security of the credential. again since this for tester use only we keep it simple. if sms verification is not required, the SMS role creation can be ignored
@@ -52,6 +52,12 @@ then clikc `Next Step` to proceed
 
 * In `Review` page, after reviewing the settings click on `Create pool` button to create your user pool
 ![setup-cognito-step14](../img/cognito/14.png)
+
+* after creating user pool, click on `Domain name` on side bar
+![setup-cognito-step14](../img/cognito/14a.png)
+
+* Give your cognito signup and signin a domain name, click on `Check availability` make sure it is still available then click `Save changes`
+![setup-cognito-step14](../img/cognito/14b.png)
 
 ### Take Away
 Please take note of these two ID, they are useful in following steps
